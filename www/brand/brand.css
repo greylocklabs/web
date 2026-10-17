@@ -1,0 +1,159 @@
+/* The brand page's own layout; colors and type come from /style.css. */
+
+h2 { margin-top: 3.5rem; }
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-card,
+.type-card,
+.palette,
+.installs details {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+    box-shadow: 0 3px 0 var(--edge);
+}
+
+.logo-card {
+    margin: 0;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.logo-card img { width: 8rem; height: 8rem; }
+
+.logo-card figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.type + .meta { margin-top: 1rem; }
+
+.type {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+}
+
+.type-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1.25rem 1.5rem;
+    color: var(--text-muted);
+}
+
+.type-card .sample {
+    color: var(--text);
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.type-card .sample.display {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+}
+
+.palettes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+}
+
+/* Each card shows its own theme, whatever the page's. */
+.palette {
+    padding: 1.25rem;
+    background: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--card-fg);
+}
+
+.palette h3 {
+    margin: 0 0 0.75rem;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.4rem;
+}
+
+.palette h4 {
+    margin: 1rem 0 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.swatches {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.swatches.app { grid-template-columns: repeat(5, 1fr); }
+.swatches.terminal { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 30rem) {
+    .swatches.app { grid-template-columns: repeat(4, 1fr); }
+}
+
+.swatch {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    font-size: 0.72rem;
+    line-height: 1.25;
+    text-align: left;
+    cursor: pointer;
+}
+
+.swatch .chip {
+    height: 2.75rem;
+    border-radius: var(--radius);
+    background: var(--chip);
+    box-shadow: inset 0 0 0 1px rgba(127, 127, 127, 0.25);
+}
+
+.swatch .hex { opacity: 0.7; font-variant-numeric: tabular-nums; }
+.swatch.copied .hex { opacity: 1; font-weight: 800; }
+
+.swatch:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: var(--radius);
+}
+
+.installs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.installs details { padding: 0.25rem 1.25rem; }
+.installs details[open] { padding-bottom: 1rem; }
+
+.installs summary {
+    padding: 0.6rem 0;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.installs pre {
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.installs p, .installs ul { margin: 0.5rem 0; }
