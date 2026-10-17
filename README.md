@@ -8,3 +8,6 @@ looks alike. This page's own layout is in `home.css`. `brand/` holds the logo as
 as the 512 pixel PNG the GitHub organization uses.
 
 The fonts are Nunito and Fraunces, under the SIL Open Font License; see `fonts/`.
+
+Commit messages follow the same conventional style as the apps, checked by commitlint in CI. Run
+`npm install` and `git config core.hooksPath .githooks` to check them locally as well.

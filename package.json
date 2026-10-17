@@ -1,0 +1,12 @@
+{
+  "name": "greylocklabs-web",
+  "private": true,
+  "description": "Tooling for the Greylock Labs website",
+  "scripts": {
+    "commitlint": "commitlint --edit"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0"
+  }
+}
