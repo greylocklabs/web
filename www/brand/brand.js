@@ -56,7 +56,20 @@
     pre.replaceWith(wrap);
     wrap.append(pre, button);
   }
-  document.querySelectorAll(".installs pre:not(.slack)").forEach(addCopy);
+  document.querySelectorAll(".installs pre:not(.slack):not(.fetched)").forEach(addCopy);
+
+  // Long snippets load from the themes repository, so the page never holds a stale copy.
+  document.querySelectorAll("pre.fetched").forEach(function (pre) {
+    fetch(pre.dataset.src)
+      .then(function (response) { return response.text(); })
+      .then(function (text) {
+        pre.querySelector("code").textContent = text.replace(/^\/\* Generated[^\n]*\n/, "").trim();
+        addCopy(pre);
+      })
+      .catch(function () {
+        pre.querySelector("code").textContent = "Could not load it; download it from " + pre.dataset.src;
+      });
+  });
 
   function card(theme) {
     var section = el("section", "palette");

@@ -160,6 +160,7 @@ h2 { margin-top: 3.5rem; }
 }
 
 .installs pre.slack { white-space: pre-wrap; word-break: break-all; }
+.installs pre.fetched { max-height: 22rem; overflow-y: auto; }
 
 .installs .copy {
     position: absolute;
