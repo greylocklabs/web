@@ -63,3 +63,21 @@
     .apps a { transition: none; }
     .apps a:hover { transform: none; }
 }
+
+/* The headline's last words take turns. All of them share one cell, so the headline is always as
+   tall as the longest needs and nothing below it moves. */
+h1 .cycle {
+    display: grid;
+}
+
+h1 .cycle span {
+    grid-area: 1 / 1;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+h1 .cycle span.on { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+    h1 .cycle span { transition: none; }
+}
