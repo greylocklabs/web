@@ -40,6 +40,24 @@
     return button;
   }
 
+  // A copy button on each code block, which copies its text.
+  function addCopy(pre) {
+    if (!navigator.clipboard || pre.parentNode.classList.contains("code")) return;
+    var button = el("button", "sticker copy", "Copy");
+    button.type = "button";
+    button.addEventListener("click", function () {
+      navigator.clipboard.writeText(pre.querySelector("code").textContent).then(function () {
+        button.textContent = "Copied";
+        setTimeout(function () { button.textContent = "Copy"; }, 1200);
+      });
+    });
+    // In a wrapper, so the button stays put while a long line scrolls.
+    var wrap = el("div", "code");
+    pre.replaceWith(wrap);
+    wrap.append(pre, button);
+  }
+  document.querySelectorAll(".installs pre:not(.slack)").forEach(addCopy);
+
   function card(theme) {
     var section = el("section", "palette");
     section.style.setProperty("--card-bg", theme.colors.background);
@@ -63,6 +81,11 @@
     .then(function (data) {
       ["callie", "callie-light"].forEach(function (name) {
         if (data[name]) holder.append(card(data[name]));
+      });
+      document.querySelectorAll("pre.slack").forEach(function (pre) {
+        var theme = data[pre.dataset.themeName];
+        if (theme) pre.querySelector("code").textContent = theme.slack;
+        addCopy(pre);
       });
     })
     .catch(function () {

@@ -151,9 +151,22 @@ h2 { margin-top: 3.5rem; }
     cursor: pointer;
 }
 
+.installs .code { position: relative; }
+
 .installs pre {
     overflow-x: auto;
     white-space: pre;
+    padding-right: 5.5rem;
+}
+
+.installs pre.slack { white-space: pre-wrap; word-break: break-all; }
+
+.installs .copy {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.8rem;
 }
 
 .installs p, .installs ul { margin: 0.5rem 0; }
