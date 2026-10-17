@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-labelledby="t">
+  <title id="t">Callie</title>
+  <defs>
+    <!-- matte pink, lighter at the top -->
+    <linearGradient id="body" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#f7aed0"/>
+      <stop offset="1" stop-color="#d8639c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- the calendar's binding rings, worn as ears -->
+  <g fill="#a23f72">
+    <rect x="36" y="18" width="16" height="22" rx="8"/>
+    <rect x="76" y="18" width="16" height="22" rx="8"/>
+  </g>
+
+  <rect x="14" y="28" width="100" height="88" rx="34" fill="url(#body)"/>
+
+  <g fill="#e0508e" opacity="0.55">
+    <ellipse cx="35" cy="89" rx="8.5" ry="5"/>
+    <ellipse cx="93" cy="89" rx="8.5" ry="5"/>
+  </g>
+
+  <!-- happy closed eyes and a small smile -->
+  <g fill="none" stroke="#3a1630" stroke-linecap="round">
+    <path d="M39.5 80 Q46 71.5 52.5 80" stroke-width="4.5"/>
+    <path d="M75.5 80 Q82 71.5 88.5 80" stroke-width="4.5"/>
+    <path d="M58 90 Q64 96.5 70 90" stroke-width="4"/>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+/* This page's own layout. style.css is shared with the apps' sites. */
+
+.apps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 2.5rem 0 0;
+    list-style: none;
+}
+
+.apps a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-large);
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+.apps a:hover {
+    border-color: var(--border);
+    transform: translateY(-2px);
+}
+
+.apps a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.apps img {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.apps strong {
+    color: var(--text);
+    font-family: "Fraunces", serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.apps .what {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.apps .where {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .apps a { transition: none; }
+    .apps a:hover { transform: none; }
+}
