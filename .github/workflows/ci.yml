@@ -10,13 +10,4 @@ permissions:
 
 jobs:
   commitlint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-
-      - name: Lint commit messages
-        uses: wagoid/commitlint-github-action@v6
-        with:
-          configFile: commitlint.config.mjs
+    uses: greylocklabs/.github/.github/workflows/commitlint.yml@v1
