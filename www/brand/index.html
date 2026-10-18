@@ -139,6 +139,20 @@ curl -fsSLo ~/.config/wezterm/colors/Callie.toml https://raw.githubusercontent.c
 </details>
 
 <details>
+  <summary>Emacs</summary>
+  <p>Install the themes repository as a package on Emacs 29 or newer, here with straight.el:</p>
+  <pre><code>(use-package callie-theme
+  :straight (:host github :repo "greylocklabs/themes"
+             :local-repo "greylocklabs-themes" :files ("ports/emacs/*.el"))
+  :config
+  (load-theme 'callie-light t t)
+  (load-theme 'callie t))</code></pre>
+  <p>Loading <code>callie-light</code> without enabling it lets
+    <code>theme-choose-variant</code> switch between the two. It covers font-lock, tree-sitter,
+    flymake, lsp-mode, magit, vertico, corfu, Org and more.</p>
+</details>
+
+<details>
   <summary>opencode</summary>
   <pre><code>mkdir -p ~/.config/opencode/themes
 curl -fsSLo ~/.config/opencode/themes/callie.json https://raw.githubusercontent.com/greylocklabs/themes/main/ports/opencode/callie.json</code></pre>
