@@ -3,6 +3,7 @@ const scopes = [
   "brand", // the logo and the files under brand/
   "ci",
   "deps",
+  "deps-dev", // Dependabot's updates to development dependencies
 ];
 
 /** @type {import('@commitlint/types').UserConfig} */
