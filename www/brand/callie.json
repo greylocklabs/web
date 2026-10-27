@@ -79,11 +79,11 @@
       "text": "#2b1a26",
       "text-muted": "#6b5562",
       "text-faint": "#8f7a87",
-      "accent": "#e45f97",
-      "accent-text": "#2e0f20",
+      "accent": "#c2407a",
+      "accent-text": "#fffafc",
       "danger": "#c93c45",
       "edge": "#dcc8d3",
-      "accent-edge": "#a83a6d"
+      "accent-edge": "#8e2c5a"
     },
     "terminal": {
       "foreground": "#55414e",
@@ -115,9 +115,9 @@
       "border": "#e0ccd7",
       "hairline": "#efe2e9",
       "edge": "#dcc8d3",
-      "accent": "#e45f97",
-      "accent_text": "#2e0f20",
-      "accent_edge": "#a83a6d",
+      "accent": "#c2407a",
+      "accent_text": "#fffafc",
+      "accent_edge": "#8e2c5a",
       "selection": "#e0ccd7",
       "red": "#9e5251",
       "green": "#3f7b4a",
@@ -132,6 +132,6 @@
       "added_hl": "#bfcec0",
       "removed_hl": "#ddc1c3"
     },
-    "slack": "#fbf5f8,#f3e7ee,#e45f97,#2e0f20,#f3e7ee,#55414e,#3f7b4a,#9e5251,#dcc8d3,#55414e"
+    "slack": "#fbf5f8,#f3e7ee,#c2407a,#fffafc,#f3e7ee,#55414e,#3f7b4a,#9e5251,#dcc8d3,#55414e"
   }
 }
